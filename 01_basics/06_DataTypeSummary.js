@@ -23,14 +23,18 @@ console.log(id === anotherId);
 // Array, Objects, Functions
 
 const heros = ["shaktiman", "naagraj", "doga"];
+console.log(heros)
 let myObj = {
     name: "hitesh",
     age: 22,
 }
+console.log(myObj)
 
 const myFunction = function(){
     console.log("Hello world");
 }
+myFunction();
+console.log(myFunction);
 
 console.log(typeof anotherId);
 
