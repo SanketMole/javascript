@@ -11,7 +11,7 @@ const dc = ["superman","flash","batman"]
 
 const allHeros = marvel_heros.concat(dc)
 console.log(allHeros);
-//Unlike push 'concat' merge two arrays 
+//Unlike push, 'concat' merge two arrays 
 //Also 'concat' doesn't alter original array a new variable is required
 
 //Spread operator
