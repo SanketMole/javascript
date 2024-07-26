@@ -54,4 +54,26 @@ const users = [
 // console.log(users[1].email)
 // console.log(tinderUser);
 
-console.log(Object.keys(tinderUser));
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
+
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+
+
+/*Objects De-Structure */
+
+const course = {
+    coursename : 'js in hindi',
+    price : "999",
+    courseInstructor : "Sanket"
+}
+
+// course.courseInstructor     //Will not be useful everytime 
+//That's the lengthly way to use multiple time 
+
+//Instead Use this way
+const {courseInstructor: instructor} = course
+console.log(instructor)
+
+
