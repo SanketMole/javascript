@@ -44,10 +44,24 @@
 // }
 // console.log(addTwo(3,4))
 
-//Implicit return 
-const addTwo = (num1, num2) =>  (num1 + num2)
-console.log(addTwo(3,4));
-//To return objects implicitly
-const add = (num1,num2) => ({username: "Sk"})
+// //Implicit return 
+// const addTwo = (num1, num2) =>  (num1 + num2)
+// console.log(addTwo(3,4));
+// //To return objects implicitly
+// const add = (num1,num2) => ({username: "Sk"})
 
 
+//Immediately Invoke Function Expression (IIFE)
+//() ()
+(function chai(){
+    console.log(`DB Connected`)
+}) ();
+
+(function chai1(){
+    console.log(`DB two Connected`)
+})();
+
+//While using arrow function
+((name) => {
+    console.log(`${name}`)
+}) ("Sanket");
