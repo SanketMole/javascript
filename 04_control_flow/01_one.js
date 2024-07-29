@@ -6,7 +6,7 @@ if( 3 !== 3){
 }
 
 
-//if-else
+// if - else
 
 if(3 != 3){
     console.log("Not")
