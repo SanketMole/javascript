@@ -24,10 +24,39 @@
     // }
     //attachEvent()
     //jQuery - on
-    document.getElementById('owl').addEventListener('click',function(){
-        alert("owl clicked again")
-    })
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //   console.log(e);
+    // })
 
+    // document.getElementById('images').addEventListener('click',function(){
+    //     console.log("clicked inside the ul")
+    // },false) 
+    
+    // document.getElementById('owl').addEventListener('click',function(){
+    //     console.log("owl clicked")
+    // },false) 
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     console.log("google clicked")
+    // },false)
+    
+    // document.querySelector('#images').addEventListener('click',function(e){
+    //     console.log(e.target.parentNode);
+    //     let removeIt = e.target.parentNode
+    //     removeIt.remove()
+    // },false)
+    // removeIt.parentNode.removeChild(removeIt)   //Alternative of remove()
+
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+    },false)
     
 </script>
 </html>
