@@ -7,7 +7,7 @@
 ## project 1 
 ## Color Changer
 ```javascript
-console.log("Sanket")
+console.log("SSM")
 const buttons = document.querySelectorAll('.button')
 const body = document.querySelector("body")
 
