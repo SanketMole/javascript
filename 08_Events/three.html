@@ -16,14 +16,14 @@
     const sayDate = function(s){
         document.querySelector('h2').innerHTML = Date.now()
     }
-    
+    let intervalID
     document.querySelector('#start').addEventListener('click',function(){
-        // let intervalID = setInterval(sayDate,1000,"Hi")
+        intervalID = setInterval(sayDate,1000,"Hi")
         console.log("STARTED");
     })
 
     document.querySelector('#stop').addEventListener('click',function(){
-        // clearInterval(intervalID)
+        clearInterval(intervalID)
         console.log("STOPPED")
     })
 
