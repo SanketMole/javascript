@@ -1,12 +1,11 @@
-#Projects related to DOM
+# Projects related to DOM
 
-##project link
-[Click here](https://stackblitz.com/edit/dom-project-chaiaurcode-5ktvd2?file=index.html)
+## project link [Click here](https://stackblitz.com/edit/dom-project-chaiaurcode-5ktvd2?file=index.html)
 
-#Solution code
+# Solution code
 
-##project 1 
-##Color Changer
+## project 1 
+## Color Changer
 ```javascript
 console.log("SSM")
 const buttons = document.querySelectorAll('.button')
@@ -34,8 +33,8 @@ buttons.forEach(function(button){
 
 ```
 
-##Project 2
-##BMI Generator
+## Project 2
+## BMI Generator
 ```javascript
 const form = document.querySelector('form')
 
@@ -67,8 +66,8 @@ form.addEventListener('submit',function(e){
 })
 ```
 
-##Project 3
-##Digital Clock
+## Project 3
+## Digital Clock
 ```javascript
 const clock = document.getElementById('clock')
 
@@ -81,8 +80,8 @@ setInterval(function(){
 }, 1000)
 ```
 
-##Project 4
-##Guess the Number 
+## Project 4
+## Guess the Number 
 
 ```javascript
 let randomNumber = parseInt(Math.random() * 100 + 1)
@@ -175,6 +174,66 @@ function endGame(){
   playGame = false;
   newGame()
 }
+
+
+```
+
+## Project 5
+## Keyboard
+
+```javascript
+const insert = document.getElementById('insert')
+
+window.addEventListener('keydown',(e) => {
+  insert.innerHTML = `
+    <div class="color">
+      <table>
+      <tr>
+        <th>Key</th>
+        <th>Keycode</th>
+        <th>Code</th>
+      </tr>
+      <tr>
+        <td>${e.key === " "?"Space":e.key}</td>
+        <td>${e.keyCode}</td>
+        <td>${e.code}</td>
+      </tr>
+      
+    </table>
+    </div>
+  `;
+});
+```
+
+## Project 6
+## Unlimited Color
+
+```javascript
+const randomColor = function(){
+  const hex = "0123456789ABCDEF"
+  let color = '#'
+  for(let i = 0; i<6; i++){
+    color += hex[Math.floor(Math.random() * 16)]
+  }
+  return color
+}
+let intervalID;
+const startChangingColor = function(){
+  if(!intervalID){
+    intervalID = setInterval(changeBgColor, 1000);
+  }
+
+  function changeBgColor(){
+    document.body.style.backgroundColor = randomColor();
+  }
+};
+const stopChangingColor = function(){
+  clearInterval(intervalID)
+  intervalID = null;
+}
+
+document.querySelector("#start").addEventListener('click',startChangingColor)
+document.querySelector("#stop").addEventListener('click',stopChangingColor)
 
 
 ```
