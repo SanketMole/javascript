@@ -33,8 +33,8 @@ promiseThree.then(function(user){
 
 const promiseFour = new Promise(function(resolve, reject){
     setTimeout(function(){
-        // let error = true
-        let error = false 
+        let error = true
+        // let error = false 
         if(!error){
             resolve({username: "Sanket", password: "123"})
         } else{
@@ -45,7 +45,8 @@ const promiseFour = new Promise(function(resolve, reject){
 
 promiseFour.then((user) => {
     console.log(user);
-    return user.username
+    // return user.username
+// })
 }).then((username) => {
     console.log(username)
 }).catch(function(error){
@@ -69,7 +70,7 @@ async function consumePromiseFive(){
     console.log(response)
 }
 
-//Handling error gracefully
+// //Handling error gracefully
 
 async function consumePromiseFive(){
     try {
@@ -81,3 +82,33 @@ async function consumePromiseFive(){
 }
 
 consumePromiseFive()
+
+//fetch using async wait and try-catch
+
+async function getAllUsers() {
+    try {
+        const response = await fetch('https://api.github.com/users/sanketmole')
+        const data = await response.json()               //Bcz, response takes time, we have to use await
+        console.log(data);
+    } catch (error) {
+        console.log("E: ", error);
+    }
+}
+
+// fetch using .then and .catch
+
+// fetch('https://api.github.com/users/sanketmole')
+// .then((data) => {
+//     return response.json()
+// }).then((data) => {
+//     console.log(data);
+// })
+// .catch((error) => {
+//     console.log(error)
+// })
+
+getAllUsers()
+
+//Remeber fetch() runs ahead of promise
+// You get fetch() results before promise
+// fetch() is a promise, but it runs ahead of promise
